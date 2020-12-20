@@ -1,0 +1,99 @@
+/**{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}*/
+
+/*html{
+    background-color: maroon;
+}*/
+
+.row .person{
+    position: relative;
+    text-align: center;
+    padding: 0px auto;
+    margin: 20px auto;
+    width: 350px;
+    max-width: 100%;
+    /*transform: translateX(20%);*/
+    /*border: 1px solid black;*/
+    /*background-color: #4287f5;*/
+    box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.title {
+  color: grey;
+  font-size: 20px;
+}
+
+.person, .person a{
+    color: rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 5px gray;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.row .person.director{
+    max-width: 100%;
+    width: 400px;
+    /*padding: 15px;*/
+    margin: 10px auto;
+}
+
+.row .img_container{
+    position: relative;
+    max-width: 100%;
+    width: 150px;
+    height: 200px;
+    border: 0px 1px 1px solid black;
+    margin: 0px auto 5px;
+    overflow: hidden;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.row .img_container img {
+    position: absolute;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+input.arbtn{
+    display: none;
+}
+/*.bg-dark{
+    background-color: black !important;
+}*/
+.arrowbtn{
+    float: right;
+    padding: 0px;
+    color: white;
+    transition: transform ease 0.5s;
+}
+.full {
+    height: auto;
+    max-height: 0px;
+    /*float: right;*/
+    transition: max-height ease 0.5s, width ease 0.5s;
+    overflow: hidden;
+}
+.short{
+    transition: max-height ease 0.5s, width ease 0.5s;
+}
+
+.arbtn:checked ~ .full {
+    max-height: 300px;
+}
+
+.arbtn:checked ~ label>.arrowbtn{
+    transform: rotate(180deg);
+    /*padding: 15px 10px;*/
+    margin: 0px;
+}
+
+label{
+    width: 100%;
+    margin: 0px;
+    cursor: pointer;
+}
